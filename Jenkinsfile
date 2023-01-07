@@ -10,7 +10,7 @@ node('built-in')
 	}
     stage('Continuous Deployment') 
 	{
-sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/jenkins_multi/loans/webapp/target/webapp.war   ubuntu@172.31.34.126:/var/lib/tomcat8/webapps/qaenv.war'
+sh  'scp /home/ubuntu/.jenkins/workspace/jenkins_multi/loans/webapp/target/webapp.war   ubuntu@172.31.34.126:/var/lib/tomcat8/webapps/qaenv.war'
 	}
         
 }
