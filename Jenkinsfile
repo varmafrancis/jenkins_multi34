@@ -8,9 +8,5 @@ node('built-in')
 	{
     sh label: '', script: 'mvn package'
 	}
-    stage('Continuous Deployment') 
-	{
-sh  'scp /home/ubuntu/.jenkins/workspace/jenkins_multi/loans/webapp/target/webapp.war   ubuntu@172.31.34.126:/var/lib/tomcat8/webapps/qaenv.war'
-	}
-        
+         
 }
